@@ -9,6 +9,8 @@ RUN apt-get update \
  wget \
  curl \
  jq \
+ git \
+ vim \
  && rm -rf /var/lib/apt/lists/*
 
 ADD https://storage.googleapis.com/kubernetes-release/release/${KUBERNETES_VERSION}/bin/linux/amd64/kubectl /usr/local/bin/kubectl
@@ -22,3 +24,7 @@ RUN wget https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-lin
  && mv linux-amd64/helm /usr/local/bin/helm \
  && chmod +x /usr/local/bin/helm \
  && rm -rf linux-amd64 helm-${HELM_VERSION}-linux-amd64.tar.gz helm-${HELM_VERSION}-linux-amd64.tar.gz.sha256
+
+WORKDIR /root
+
+CMD bash
