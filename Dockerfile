@@ -18,7 +18,7 @@ RUN chmod +x /usr/local/bin/kubectl \
  && kubectl version --client
 
 RUN wget https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz \
- && sha256sum helm-v2.13.0-linux-amd64.tar.gz \
+ && sha256sum helm-${HELM_VERSION}-linux-amd64.tar.gz \
  | grep $(curl -s https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz.sha256) \
  && tar xzvf helm-${HELM_VERSION}-linux-amd64.tar.gz \
  && mv linux-amd64/helm /usr/local/bin/helm \
