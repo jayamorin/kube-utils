@@ -13,11 +13,11 @@ jobs:
       - run:
           name: Tag docker build
           command: |
-            docker tag jayamorin/kube-utils:latest jayamorin/kube-utils:$version.$CIRCLE_SHA1
+            docker tag jayamorin/kube-utils:latest jayamorin/kube-utils:$CIRCLE_SHA1
       - run:
           name: Push docker build to hub.docker.com
           command: |
-            docker push jayamorin/kube-utils:$version.$CIRCLE_SHA1
+            docker push jayamorin/kube-utils:$CIRCLE_SHA1
             docker push jayamorin/kube-utils:latest
 
 workflows:

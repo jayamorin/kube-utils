@@ -6,7 +6,7 @@ Kubectl and helm
 
 ## Overview
 
-Kubectl and helm binaries on Ubuntu 18.04 docker image for working with Kubernetes cluster. This image is useful for deploying helm charts, managing releases and general kubernetes administration.
+Kubectl and helm binaries on Ubuntu 18.04 docker image for working with Kubernetes cluster and applications. This image is useful for deploying helm charts, managing releases and general kubernetes administration.
 
 ## Usage
 
